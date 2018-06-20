@@ -8,14 +8,23 @@
 
 import UIKit
 import MapKit
+import RxSwift
+import RxMKMapView
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
 
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        mapView.rx.regionDidChangeAnimated
+            .subscribe(onNext: { _ in
+                print("regionDidChangeAnimated")
+            })
+        .disposed(by: disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
