@@ -19,6 +19,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        mapView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+
         // Do any additional setup after loading the view, typically from a nib.
         mapView.rx.regionDidChangeAnimated
             .subscribe(onNext: { _ in
@@ -31,7 +35,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
+extension ViewController: MKMapViewDelegate {
+
+}
