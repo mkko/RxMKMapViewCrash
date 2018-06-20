@@ -17,6 +17,7 @@
 		2B58C9B220DA2E6F00D521A9 /* RxMKMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B58C9AF20DA2E6F00D521A9 /* RxMKMapView.framework */; };
 		2B58C9B320DA2E6F00D521A9 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B58C9B020DA2E6F00D521A9 /* RxSwift.framework */; };
 		2B58C9B420DA2E6F00D521A9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B58C9B120DA2E6F00D521A9 /* RxCocoa.framework */; };
+		2B58C9B720DA2F8000D521A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B58C9B620DA2F8000D521A9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		2B58C9AF20DA2E6F00D521A9 /* RxMKMapView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMKMapView.framework; path = Carthage/Build/iOS/RxMKMapView.framework; sourceTree = "<group>"; };
 		2B58C9B020DA2E6F00D521A9 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		2B58C9B120DA2E6F00D521A9 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		2B58C9B620DA2F8000D521A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			files = (
 				2B58C9B220DA2E6F00D521A9 /* RxMKMapView.framework in Frameworks */,
 				2B58C9B320DA2E6F00D521A9 /* RxSwift.framework in Frameworks */,
+				2B58C9B720DA2F8000D521A9 /* MapKit.framework in Frameworks */,
 				2B58C9B420DA2E6F00D521A9 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +141,7 @@
 		2B58C9AE20DA2E6F00D521A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B58C9B620DA2F8000D521A9 /* MapKit.framework */,
 				2B58C9B120DA2E6F00D521A9 /* RxCocoa.framework */,
 				2B58C9AF20DA2E6F00D521A9 /* RxMKMapView.framework */,
 				2B58C9B020DA2E6F00D521A9 /* RxSwift.framework */,
@@ -214,6 +218,11 @@
 				TargetAttributes = {
 					2B58C97C20DA2CCC00D521A9 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2B58C99020DA2CCF00D521A9 = {
 						CreatedOnToolsVersion = 9.4;
